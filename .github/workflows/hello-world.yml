@@ -4,6 +4,7 @@ on:
   push
 
 env:
+  TEST_1: HELLO_1
   TEST_2: ${{ vars.TEST }}
 
 jobs:
@@ -12,5 +13,7 @@ jobs:
     steps:
     - name: Echo ACCESS_ID
       run: |
-        echo ${{ env.TEST_2 }}
+        echo ${{ env.TEST_1 }}
         echo ${{ vars.TEST }}
+        echo ${{ env.TEST_2 }}
+        
