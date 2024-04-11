@@ -5,15 +5,18 @@ on:
 
 env:
   TEST_1: HELLO_1
-  TEST_2: ${{ vars.TEST }}
+  TEST_2: ${{ vars.TEST_E }}
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: 
+      name: test
+      url: https://github.com
     steps:
     - name: Echo ACCESS_ID
       run: |
         echo ${{ env.TEST_1 }}
-        echo ${{ vars.TEST }}
+        echo ${{ vars.TEST_E }}
         echo ${{ env.TEST_2 }}
         
