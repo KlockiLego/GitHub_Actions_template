@@ -1,20 +1,16 @@
 name: "Hello World"
 
 on:
-  push:  
+  push
+
+env:
+  TEST_2: ${{ vars.TEST }}
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v4
-
-    - name: Create a text file
-      run: echo "Hello, world!" > hello.txt
-
-    - name: Archive text file
-      uses: actions/upload-artifact@v2
-      with:
-        name: hello-artifact
-        path: hello.txt
+    - name: Echo ACCESS_ID
+      run: |
+        echo ${{ env.TEST_2 }}
+        echo ${{ vars.TEST }}
