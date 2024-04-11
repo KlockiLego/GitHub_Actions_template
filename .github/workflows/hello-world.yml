@@ -16,7 +16,7 @@ jobs:
     steps:
     - name: Echo ACCESS_ID
       run: |
-        echo ${{ env.TEST_1 }}
-        echo ${{ vars.TEST_E }}
-        echo ${{ env.TEST_2 }}
+        echo "TEST_1 = ${{ env.TEST_1 }}"
+        echo "TEST_E = ${{ vars.TEST_E }}"
+        echo "TEST_2 (from TEST_E) = ${{ env.TEST_2 }}"
         
