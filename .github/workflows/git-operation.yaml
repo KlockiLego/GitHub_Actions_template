@@ -5,16 +5,14 @@ on:
   workflow_dispatch:
 
 jobs:
-  check_git_contex_variable:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Dump github contex
-        run: |
-          echo "github.repository = ${{ github.repository }}" 
   git_operation_1:
     runs-on: ubuntu-latest
     steps:
     - name: git clone repo
       uses: actions/checkout@v4
       with:
-        ref: 'main'
+        ref: 'refs/heads/main'
+    - name: check_path
+      run: |
+        pwd
+        ls -la
