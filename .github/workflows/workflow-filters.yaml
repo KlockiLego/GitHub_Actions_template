@@ -1,11 +1,11 @@
 name: Workflow Filters
 
 on:
-  workflow_dispatch:                
+  workflow_dispatch:
   push:
     branches:
       - main
-      - '!develop/**'    # ignore pushing to any branch name starting with feature using !
+      - '!feature/**'   # ignore pushing to any branch name starting with feature using !
       - test/*          # test/ui, test/checkout
   pull_request:
     types:
