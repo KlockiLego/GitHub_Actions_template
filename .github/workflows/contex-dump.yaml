@@ -14,8 +14,8 @@ jobs:
       run: echo "$GITHUB_CONTEX"
 
     - name: Dump full GitHub context 2
-      run: echo ${{ toJson(github) }}
+      run: echo "${{ toJson(github) }}"
 
     - name: Dump one GitHub context 
-      run: echo ${{ github.repository }}
+      run: echo "${{ github.repository }}"
 
