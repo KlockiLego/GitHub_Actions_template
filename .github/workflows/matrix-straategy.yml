@@ -1,8 +1,10 @@
 name: Matrix Strategy
+
 on:
   workflow_dispatch:
+
 jobs:
-  buijob_name:
+  build_job:
     runs-on: '${{ matrix.os }}'
     strategy:
       matrix:

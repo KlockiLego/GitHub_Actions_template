@@ -1,0 +1,23 @@
+name: "ENV variable"
+
+on: 
+  # push:
+  workflow_dispatch:
+
+env:
+  TEST_1: HELLO_1
+  TEST_2: ${{ vars.TEST_E }} # tak wczytuje z environment variable / repository / organization
+
+jobs:
+  job_1:
+    runs-on: ubuntu-latest
+    environment: 
+      name: test  # tak ustawiam nazwę środowiska dla environment variable
+      url: https://github.com
+    steps:
+    - name: Echo all ACCESS_ID
+      run: |
+        echo "TEST_1 = ${{ env.TEST_1 }}" 
+        echo "TEST_E = ${{ vars.TEST_E }}"
+        echo "TEST_2 (from TEST_E) = ${{ env.TEST_2 }}"
+        
