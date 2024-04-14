@@ -14,5 +14,6 @@ jobs:
         ref: 'refs/heads/main'
     - name: check_path
       run: |
+        echo "GITHUB_WORKSPACE = $GITHUB_WORKSPACE"
         pwd
         ls -la
