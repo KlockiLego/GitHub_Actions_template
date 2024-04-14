@@ -1,4 +1,4 @@
-name: "GIT operation"
+name: "Git Operation"
 
 on: 
   # push:

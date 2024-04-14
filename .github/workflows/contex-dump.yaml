@@ -1,4 +1,4 @@
-name: "contex dump"
+name: "Contex Dump"
 
 on: 
   workflow_dispatch:
