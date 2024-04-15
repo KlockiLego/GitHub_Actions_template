@@ -8,21 +8,22 @@ jobs:
   job_1_name:
     runs-on: ubuntu-latest
     steps:
-
+      - run: echo "content of artifact_1.txt" > artifact_1.txt
       - name: Archive file as artifact 1
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: artifact_name_1
           path: ./artifact_1.txt
 
+      - run: echo "content of artifact_2.txt" > artifact_2.txt
       - name: Archive file as artifact 2
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: artifact_name_1 
           path: ./artifact_2.txt # file will be added to artifact_name_1
 
       - name: Archive dir as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: artifact_name_2
           path: ./

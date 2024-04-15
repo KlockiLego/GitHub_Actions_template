@@ -1,1 +1,0 @@
-content of artifact_2.txt
