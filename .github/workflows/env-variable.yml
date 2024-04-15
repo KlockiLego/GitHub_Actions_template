@@ -9,7 +9,7 @@ env:
   TEST_2: ${{ vars.TEST_E }} # tak wczytuje z environment variable / repository / organization
 
 jobs:
-  job_1:
+  job_display_env_variables:
     runs-on: ubuntu-latest
     environment: 
       name: test  # tak ustawiam nazwę środowiska dla environment variable
